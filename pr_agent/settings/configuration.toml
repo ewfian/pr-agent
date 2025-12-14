@@ -6,12 +6,12 @@
 
 [config]
 # models
-model="gpt-5-2025-08-07"
-fallback_models=["o4-mini"]
+model="claude-sonnet-4-5-20250929"
+fallback_models=[]
 #model_reasoning="o4-mini" # dedicated reasoning model for self-reflection
 #model_weak="gpt-4o" # optional, a weaker model to use for some easier tasks
 # CLI
-git_provider="github"
+git_provider="bitbucket"
 publish_output=true
 publish_output_progress=true
 verbosity_level=0 # 0,1,2
@@ -26,7 +26,7 @@ disable_auto_feedback = false
 ai_timeout=120 # 2minutes
 skip_keys = []
 custom_reasoning_model = false # when true, disables system messages and temperature controls for models that don't support chat-style inputs
-response_language="en-US" # Language locales code for PR responses in ISO 3166 and ISO 639 format (e.g., "en-US", "it-IT", "zh-CN", ...)
+response_language="zh-CN" # Language locales code for PR responses in ISO 3166 and ISO 639 format (e.g., "en-US", "it-IT", "zh-CN", ...)
 # token limits
 max_description_tokens = 500
 max_commits_tokens = 500
@@ -77,7 +77,7 @@ extended_thinking_max_output_tokens = 4096
 
 [pr_reviewer] # /review #
 # enable/disable features
-require_score_review=false
+require_score_review=true
 require_tests_review=true
 require_estimate_effort_to_review=true
 require_can_be_split_review=false
